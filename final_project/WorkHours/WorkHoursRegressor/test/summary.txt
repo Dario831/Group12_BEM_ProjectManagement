@@ -1,0 +1,6 @@
+Best Val RMSE: 9.899
+Test MAE : 8.472
+Test MAPE: 19.76%
+Test Pearson r: -0.011
+Hidden Layers: [512, 256, 128, 64]
+Epochs Trained: 46

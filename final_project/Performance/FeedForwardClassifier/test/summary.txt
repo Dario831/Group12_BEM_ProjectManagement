@@ -1,0 +1,6 @@
+Best Val Acc : 0.8927
+Final Train Acc : 0.8949
+Final Test Acc  : 0.8873
+Final Test F1   : 0.8874
+Hidden Layers   : [512, 256, 128, 64]
+Epochs Trained  : 26

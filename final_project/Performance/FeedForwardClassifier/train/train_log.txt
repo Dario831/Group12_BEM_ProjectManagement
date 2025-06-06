@@ -1,0 +1,27 @@
+Epoch 001 | Train Loss: 1.4297 | Train Acc: 0.578 | Val Acc: 0.579
+Epoch 002 | Train Loss: 0.6763 | Train Acc: 0.862 | Val Acc: 0.872
+Epoch 003 | Train Loss: 0.3694 | Train Acc: 0.844 | Val Acc: 0.838
+Epoch 004 | Train Loss: 0.3371 | Train Acc: 0.892 | Val Acc: 0.875
+Epoch 005 | Train Loss: 0.3017 | Train Acc: 0.884 | Val Acc: 0.880
+Epoch 006 | Train Loss: 0.2816 | Train Acc: 0.895 | Val Acc: 0.893
+Epoch 007 | Train Loss: 0.2828 | Train Acc: 0.890 | Val Acc: 0.874
+Epoch 008 | Train Loss: 0.2660 | Train Acc: 0.894 | Val Acc: 0.881
+Epoch 009 | Train Loss: 0.2661 | Train Acc: 0.900 | Val Acc: 0.890
+Epoch 010 | Train Loss: 0.2672 | Train Acc: 0.901 | Val Acc: 0.883
+Epoch 011 | Train Loss: 0.2535 | Train Acc: 0.907 | Val Acc: 0.887
+Epoch 012 | Train Loss: 0.2575 | Train Acc: 0.905 | Val Acc: 0.887
+Epoch 013 | Train Loss: 0.2391 | Train Acc: 0.909 | Val Acc: 0.890
+Epoch 014 | Train Loss: 0.2356 | Train Acc: 0.914 | Val Acc: 0.892
+Epoch 015 | Train Loss: 0.2341 | Train Acc: 0.901 | Val Acc: 0.885
+Epoch 016 | Train Loss: 0.2487 | Train Acc: 0.906 | Val Acc: 0.893
+Epoch 017 | Train Loss: 0.2434 | Train Acc: 0.911 | Val Acc: 0.884
+Epoch 018 | Train Loss: 0.2300 | Train Acc: 0.905 | Val Acc: 0.876
+Epoch 019 | Train Loss: 0.2321 | Train Acc: 0.914 | Val Acc: 0.881
+Epoch 020 | Train Loss: 0.2534 | Train Acc: 0.881 | Val Acc: 0.862
+Epoch 021 | Train Loss: 0.2602 | Train Acc: 0.908 | Val Acc: 0.885
+Epoch 022 | Train Loss: 0.2346 | Train Acc: 0.916 | Val Acc: 0.891
+Epoch 023 | Train Loss: 0.2316 | Train Acc: 0.883 | Val Acc: 0.859
+Epoch 024 | Train Loss: 0.2611 | Train Acc: 0.900 | Val Acc: 0.868
+Epoch 025 | Train Loss: 0.2417 | Train Acc: 0.902 | Val Acc: 0.876
+Epoch 026 | Train Loss: 0.2376 | Train Acc: 0.895 | Val Acc: 0.866
+Early stopping at epoch 26
