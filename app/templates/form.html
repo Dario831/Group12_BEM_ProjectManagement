@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Data Submission</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+    .container {
+      max-width: 640px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    h1 {
+      margin-bottom: 24px;
+      font-size: 28px;
+      font-weight: 600;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin: 20px 0 6px;
+      font-weight: 600;
+    }
+    select, input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      margin-top: 30px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #exp-error {
+      color: #b00020;
+      font-weight: 600;
+      margin-top: 6px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Let's Predict the Future Together</h1>
+
+    {% if error %}
+      <div style="color: red; font-weight: bold; margin-bottom: 10px;">
+        {{ error }}
+      </div>
+    {% endif %}
+
+    <form method="post" id="employee-form">
+      <label for="department">Department</label>
+      <select name="department" id="department" required>
+        <option>Customer Support</option>
+        <option>Engineering</option>
+        <option>Finance</option>
+        <option>HR</option>
+        <option>IT</option>
+        <option>Legal</option>
+        <option>Operations</option>
+        <option>Marketing</option>
+        <option>Sales</option>
+      </select>
+
+      <label for="job_title">Job Title</label>
+      <select name="job_title" id="job_title" required>
+        <option>Analyst</option>
+        <option>Consultant</option>
+        <option>Developer</option>
+        <option>Engineer</option>
+        <option>Manager</option>
+        <option>Specialist</option>
+        <option>Technician</option>
+      </select>
+
+      <label for="education_level">Education Level</label>
+      <select name="education_level" id="education_level" required>
+        <option>High School</option>
+        <option>Bachelor</option>
+        <option>Master</option>
+        <option>PhD</option>
+      </select>
+
+      <label for="age">Age</label>
+      <input type="number" name="age" id="age" required>
+
+      <label for="experience">Years of Experience</label>
+      <input type="number" name="experience" id="experience" required>
+      <div id="exp-error">Years of experience cannot be greater than age.</div>
+
+      <label for="team_size">Team Size</label>
+      <input type="number" name="team_size" id="team_size" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    const ageInput = document.getElementById('age');
+    const experienceInput = document.getElementById('experience');
+    const errorMessage = document.getElementById('exp-error');
+    const form = document.getElementById('employee-form');
+
+    function validate() {
+      const age = parseInt(ageInput.value);
+      const experience = parseInt(experienceInput.value);
+
+      if (!isNaN(age) && !isNaN(experience) && experience > age) {
+        errorMessage.style.display = 'block';
+        return false;
+      } else {
+        errorMessage.style.display = 'none';
+        return true;
+      }
+    }
+
+    ageInput.addEventListener('input', validate);
+    experienceInput.addEventListener('input', validate);
+
+    form.addEventListener('submit', function(e) {
+      if (!validate()) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>

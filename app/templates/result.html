@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Results</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    h1, h2 {
+      text-align: center;
+      font-weight: 600;
+      color: #222;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 12px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    li strong {
+      color: #2c3e50;
+    }
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      text-decoration: none;
+      background: #007BFF;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    a:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Submitted Information</h1>
+    <ul>
+      {% for key, value in data.items() %}
+        <li><strong>{{ key.replace('_', ' ').title() }}:</strong> {{ value }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Predictions</h2>
+    <ul>
+      <li><strong>Performance Class:</strong> {{ performance_class }}</li>
+      <li><strong>Predicted Monthly Salary:</strong> €{{ "%.2f" | format(predicted_salary) }}</li>
+      <li><strong>Predicted Work Hours/Week:</strong> {{ "%.1f" | format(predicted_workhours) }} hours</li>
+      <li><strong>Predicted Satisfaction Bin:</strong> {{ predicted_satisfaction | title }}</li>
+    </ul>
+
+    <a href="/">Back to Form</a>
+  </div>
+</body>
+</html>
